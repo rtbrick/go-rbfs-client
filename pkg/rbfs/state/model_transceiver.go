@@ -28,6 +28,8 @@ type Transceiver struct {
 	TransceiverCapabilities string `json:"transceiver_capabilities,omitempty"`
 	// The optics connector type.
 	ConnectorType string `json:"connector_type,omitempty"`
+	// The transceiver media type.
+	MediaType string `json:"media_type,omitempty"`
 	// The optics power class.
 	PowerClass string `json:"power_class,omitempty"`
 	// The power state class. This attribute has been marked deprecated and will be removed in a future release. Please use the power_class_mode attribute instead.
@@ -49,13 +51,13 @@ type Transceiver struct {
 	// The transceiver temperature in degree celsius.
 	TemperatureC float64 `json:"temperature_c,omitempty"`
 	// The temperature high alarm threshold in degree celsius.
-	TemperatureHighAlarmThresholdV float64 `json:"temperature_high_alarm_threshold_v,omitempty"`
+	TemperatureHighAlarmThresholdC float64 `json:"temperature_high_alarm_threshold_c,omitempty"`
 	// The temperature high warning threshold in degree celsius.
-	TemperatureHighWarningThresholdV float64 `json:"temperature_high_warning_threshold_v,omitempty"`
+	TemperatureHighWarningThresholdC float64 `json:"temperature_high_warning_threshold_c,omitempty"`
 	// The temperature low alarm threshold in degree celsius.
-	TemperatureLowAlarmThresholdV float64 `json:"temperature_low_alarm_threshold_v,omitempty"`
+	TemperatureLowAlarmThresholdC float64 `json:"temperature_low_alarm_threshold_c,omitempty"`
 	// The temperatue low warning threshold in degree celsius.
-	TemperatureLowWarningThresholdV float64              `json:"temperature_low_warning_threshold_v,omitempty"`
+	TemperatureLowWarningThresholdC float64              `json:"temperature_low_warning_threshold_c,omitempty"`
 	Tx                              *TransceiverModuleTx `json:"tx,omitempty"`
 	Rx                              *TransceiverModuleRx `json:"rx,omitempty"`
 }
